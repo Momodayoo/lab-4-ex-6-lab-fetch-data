@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <title>JSON Placeholder Axios</title>
+</head>
+
+<body>
+    <h1>Check the console</h1>
+</body>
+<!-- need to include the axios script first -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/a
+xios.min.js"></script>
+<script>
+    axios.get('https://jsonplaceholder.typicode.com/posts?_limit=10')
+        .then(response => console.log(response.data))
+    axios.post('https://jsonplaceholder.typicode.com/posts?_limit=10',
+        { // POSTed data goes in the request body
+            title: 'The Studio',
+            body: 'Something funny',
+            userId: 1,
+        })
+        .then(response => console.log(response.data))
+        </script>
+
+<div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+
+</html>
